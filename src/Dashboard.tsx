@@ -8,6 +8,8 @@ interface LightsState {
   livingRoom: boolean;
 }
 
+type RoutineType = 'night' | 'day' | 'eco' | 'comfort';
+
 interface LightControlProps {
   name: string;
   usage: string;
@@ -23,11 +25,17 @@ const Dashboard: React.FC = () => {
     livingRoom: true
   });
 
+  const [activeRoutine, setActiveRoutine] = useState<RoutineType | null>(null);
+
   const toggleLight = (room: keyof LightsState): void => {
     setLights(prev => ({
       ...prev,
       [room]: !prev[room]
     }));
+  };
+
+  const toggleRoutine = (routine: RoutineType): void => {
+    setActiveRoutine(prev => prev === routine ? null : routine);
   };
 
   return (
@@ -136,7 +144,33 @@ const Dashboard: React.FC = () => {
       </div>
 
       <div className="routines-section">
-        <img src="https://api.builder.io/api/v1/image/assets/TEMP/36526f47a4d9cf3988c111ec8e047e3bb6207f53?width=760" alt="Routines" className="routines-image" />
+        <div className="section-title">Routines</div>
+        <div className="routines-grid">
+          <button
+            className={`routine-button ${activeRoutine === 'night' ? 'active' : ''}`}
+            onClick={() => toggleRoutine('night')}
+          >
+            Night
+          </button>
+          <button
+            className={`routine-button ${activeRoutine === 'day' ? 'active' : ''}`}
+            onClick={() => toggleRoutine('day')}
+          >
+            Day
+          </button>
+          <button
+            className={`routine-button ${activeRoutine === 'eco' ? 'active' : ''}`}
+            onClick={() => toggleRoutine('eco')}
+          >
+            Eco
+          </button>
+          <button
+            className={`routine-button ${activeRoutine === 'comfort' ? 'active' : ''}`}
+            onClick={() => toggleRoutine('comfort')}
+          >
+            Comfort
+          </button>
+        </div>
       </div>
 
       <div className="action-buttons">
