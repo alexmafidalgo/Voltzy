@@ -1,0 +1,156 @@
+.SPU {
+  background: linear-gradient(
+    180deg,
+    rgba(120, 184, 94, 1) 0%,
+    rgba(30, 123, 69, 1) 91%
+  );
+  min-height: 917px;
+  min-width: 412px;
+  position: relative;
+  width: 100%;
+}
+
+.SPU .this-will-help {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: "Comfortaa-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  left: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 864px;
+  width: 379px;
+}
+
+.SPU .vector {
+  height: 162px;
+  left: 120px;
+  position: absolute;
+  top: 484px;
+  width: 180px;
+}
+
+.SPU .no {
+  display: flex;
+  flex-direction: column;
+  gap: 20.2px;
+  height: 89px;
+  left: 162px;
+  position: absolute;
+  top: 519px;
+  width: 99px;
+}
+
+.SPU .svgrepo-iconcarrier {
+  height: 50.49px;
+  margin-left: 32.4px;
+  width: 33.68px;
+}
+
+.SPU .text-wrapper {
+  align-items: center;
+  color: #000000;
+  display: flex;
+  font-family: "Comfortaa-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  height: 18px;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.SPU .img {
+  height: 168px;
+  left: 117px;
+  position: absolute;
+  top: 264px;
+  width: 204px;
+}
+
+.SPU .yes {
+  height: 76px;
+  left: 167px;
+  position: absolute;
+  top: 312px;
+  width: 70px;
+}
+
+.SPU .div {
+  align-items: center;
+  color: #000000;
+  display: flex;
+  font-family: "Comfortaa-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  height: 18px;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 58px;
+  white-space: nowrap;
+}
+
+.SPU .vector-wrapper {
+  height: 48.35%;
+  left: 22.68%;
+  position: absolute;
+  top: 0;
+  width: 58.93%;
+}
+
+.SPU .vector-2 {
+  height: 100.00%;
+  left: -4.85%;
+  position: absolute;
+  top: -5.45%;
+  width: 100%;
+}
+
+.SPU .p {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: "Comfortaa-Medium", Helvetica;
+  font-size: 32px;
+  font-weight: 500;
+  height: 108px;
+  justify-content: center;
+  left: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 93px;
+  width: 379px;
+}
+
+.SPU .progress {
+  background-color: #d9d9d99c;
+  border-radius: 8px;
+  display: flex;
+  height: 7px;
+  left: 154px;
+  position: absolute;
+  top: 25px;
+  width: 103px;
+}
+
+.SPU .rectangle {
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  height: 7px;
+  width: 81px;
+}

@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --background-gradient: linear-gradient(180deg, #78B85E 0%, #1E7B45 90.87%);
+  --accent-green: #34C759;
+  --dark-text: #2E2E2E;
+  --white: #FFF;
+  --glass-bg: rgba(171, 200, 171, 0.50);
+  --card-bg: #D9D9D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  width: 412px;
+  height: 917px;
+  background: var(--background-gradient);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.background-blobs {
+  width: 544px;
+  height: 707px;
+  position: absolute;
+  left: -50px;
+  top: -47px;
+  pointer-events: none;
+}
+
+.liquid-glass-header {
+  display: flex;
+  width: 412px;
+  height: 176px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 40px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: plus-lighter;
+  box-shadow: -11.15px -10.392px 48px -12px rgba(255, 255, 255, 0.15), 
+              -1.858px -1.732px 12px -8px rgba(255, 255, 255, 0.15), 
+              2.146px 2px 9.24px 0 rgba(255, 255, 255, 0.08) inset, 
+              1.217px 1.134px 4.62px 0 rgba(255, 255, 255, 0.08) inset;
+  backdrop-filter: blur(7.58px);
+}
+
+.noise-bg {
+  width: 412px;
+  height: 176px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-blend-mode: screen;
+  opacity: 0.3;
+}
+
+.header-content {
+  display: flex;
+  width: 378px;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+  position: absolute;
+  top: 72px;
+  z-index: 1;
+}
+
+.home-icon {
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.greeting-text {
+  color: var(--white);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.divider {
+  width: 157px;
+  height: 2px;
+  background: var(--white);
+}
+
+.profile-pic {
+  width: 49px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.house-id {
+  display: flex;
+  width: 65px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  position: absolute;
+  top: 136px;
+  z-index: 1;
+}
+
+.general-view-section {
+  width: 380px;
+  height: 112px;
+  position: absolute;
+  left: 16px;
+  top: 200px;
+  border-radius: 15px;
+  background: var(--glass-bg);
+  display: flex;
+  padding: 16px 13px;
+  gap: 5px;
+}
+
+.stat-card {
+  height: 80px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-card:first-child {
+  width: 96px;
+}
+
+.stat-card:nth-child(2) {
+  width: 129px;
+}
+
+.stat-card:last-child {
+  width: 120px;
+}
+
+.stat-label {
+  color: var(--dark-text);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.stat-value-large {
+  color: var(--dark-text);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.stat-unit {
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.consumption-section {
+  width: 380px;
+  height: 136px;
+  position: absolute;
+  left: 16px;
+  top: 328px;
+  border-radius: 15px;
+  background: var(--glass-bg);
+  padding: 16px 13px;
+}
+
+.section-title {
+  color: var(--dark-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+.consumption-graph {
+  width: 100%;
+  height: auto;
+}
+
+.lights-section {
+  width: 380px;
+  height: 136px;
+  position: absolute;
+  left: 16px;
+  top: 480px;
+  border-radius: 15px;
+  background: var(--glass-bg);
+  padding: 16px 13px;
+}
+
+.lights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.light-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 169px;
+}
+
+.light-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.light-name {
+  color: var(--dark-text);
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.light-control:first-child .light-name,
+.light-control:nth-child(3) .light-name {
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.light-usage {
+  color: var(--dark-text);
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.toggle-switch {
+  display: flex;
+  width: 64px;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-switch.on {
+  background: var(--accent-green);
+}
+
+.toggle-switch .toggle-knob {
+  width: 39px;
+  height: 24px;
+  border-radius: 100px;
+  background: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch.on .toggle-knob {
+  transform: translateX(21px);
+}
+
+.toggle-switch.off .toggle-knob {
+  transform: translateX(0);
+}
+
+.routines-section {
+  width: 380px;
+  height: 128px;
+  position: absolute;
+  left: 16px;
+  top: 632px;
+}
+
+.routines-image {
+  width: 100%;
+  height: 100%;
+}
+
+.action-buttons {
+  width: 232px;
+  height: 24px;
+  position: absolute;
+  left: 90px;
+  top: 792px;
+}
+
+.buttons-image {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 412px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  top: 817px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+
+.nav-background {
+  width: 412px;
+  height: 70px;
+  border-radius: 12px 12px 0 0;
+  background: var(--card-bg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-home-button {
+  width: 80px;
+  height: 77px;
+  border-radius: 50%;
+  background: #649064;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.nav-home-icon {
+  width: 40px;
+  height: 40px;
+}
