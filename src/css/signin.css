@@ -1,188 +1,233 @@
-.sign-in {
-  background: linear-gradient(
-    180deg,
-    rgba(120, 184, 94, 1) 0%,
-    rgba(30, 123, 69, 1) 91%
-  );
-  min-height: 917px;
-  min-width: 412px;
+/* Main container */
+.signin-container {
+  width: 412px;
+  height: 917px;
+  background: linear-gradient(180deg, #78B85E 0%, #1E7B45 90.87%);
   overflow: hidden;
   position: relative;
-  width: 100%;
+  margin: 0 auto;
 }
 
-.sign-in .blobs {
-  height: 1029px;
+/* Background decorative blobs */
+.background-blobs {
+  position: absolute;
   left: -106px;
-  position: absolute;
   top: -43px;
-  transform: rotate(180.00deg);
   width: 590px;
+  height: 1030px;
+  pointer-events: none;
 }
 
-.sign-in .ellipse {
-  height: 195px;
-  left: 72px;
+/* Profile section with avatar and edit button */
+.profile-section {
+  width: 182px;
+  height: 182px;
   position: absolute;
-  top: 792px;
-  transform: rotate(-180.00deg);
-  width: 154px;
+  left: 115px;
+  top: 184px;
 }
 
-.sign-in .img {
-  height: 118px;
-  left: 386px;
+.avatar {
+  width: 182px;
+  height: 182px;
+}
+
+.edit-profile-button {
   position: absolute;
-  top: 228px;
-  transform: rotate(-180.00deg);
-  width: 97px;
-}
-
-.sign-in .ellipse-2 {
-  height: 126px;
-  left: 72px;
-  position: absolute;
-  top: 436px;
-  transform: rotate(-180.00deg);
-  width: 66px;
-}
-
-.sign-in .ellipse-3 {
-  height: 221px;
-  left: 369px;
-  position: absolute;
-  top: 549px;
-  transform: rotate(-180.00deg);
-  width: 115px;
-}
-
-.sign-in .ellipse-4 {
-  height: 111px;
-  left: 72px;
-  position: absolute;
-  top: 69px;
-  transform: rotate(-180.00deg);
-  width: 140px;
-}
-
-.sign-in .login-in-here {
-  align-items: center;
-  color: #ffffffbf;
+  right: 0;
+  top: 0;
+  width: 41px;
+  height: 41px;
+  border-radius: 9999px;
+  background: #D9D9D9;
+  border: none;
   display: flex;
-  font-family: "Comfortaa-Bold", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  height: 18px;
   justify-content: center;
-  left: 151px;
-  letter-spacing: 0;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s;
+}
+
+.edit-profile-button:hover {
+  background: #c4c4c4;
+}
+
+.edit-profile-button:active {
+  background: #b0b0b0;
+}
+
+/* Sign In title */
+.signin-title {
+  display: flex;
+  width: 116px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
   line-height: normal;
   position: absolute;
-  text-align: center;
-  top: 863px;
-  white-space: nowrap;
+  left: 148px;
+  top: 400px;
+  margin: 0;
 }
 
-.sign-in .span {
-  color: #ffffffbf;
-  font-family: "Comfortaa-Bold", Helvetica;
+/* Form modal container */
+.form-modal {
+  display: flex;
+  width: 380px;
+  padding: 15px 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px;
+  background: rgba(171, 200, 171, 0.50);
+  position: absolute;
+  left: 16px;
+  top: 456px;
+  height: 272px;
+  box-sizing: border-box;
+}
+
+/* Input fields container */
+.input-fields-container {
+  width: 360px;
+  height: 190px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual text input */
+.text-input {
+  display: flex;
+  min-width: 120px;
+  width: 100%;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  background: #D9D9D9;
+  overflow: hidden;
+  flex: 1 0 0;
+  color: rgba(117, 117, 117, 1);
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  box-sizing: border-box;
+  outline: none;
+  height: 40px;
 }
 
-.sign-in .text-wrapper-2 {
+.text-input::placeholder {
+  color: rgba(117, 117, 117, 1);
+}
+
+.text-input:focus {
+  border-color: rgba(171, 200, 171, 1);
+  outline: none;
+}
+
+/* Sign In button */
+.signin-button {
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #357850;
+  color: #FFF;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.signin-button:hover {
+  background: #2a6040;
+}
+
+.signin-button:active {
+  background: #1f4830;
+}
+
+/* Login redirect section */
+.login-redirect-section {
+  position: absolute;
+  left: 16px;
+  top: 840px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.account-question {
+  display: flex;
+  width: 380px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.login-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 18px;
+  transition: color 0.2s;
+}
+
+.login-link .underline {
   text-decoration: underline;
 }
 
-.sign-in .div {
-  align-items: center;
-  color: #ffffffbf;
-  display: flex;
-  font-family: "Comfortaa-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  height: 16px;
-  justify-content: center;
-  left: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 840px;
-  white-space: nowrap;
-  width: 380px;
+.login-link:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.sign-in .text-wrapper-3 {
-  align-items: center;
-  color: #ffffff;
-  display: flex;
-  font-family: "Comfortaa-Bold", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 40px;
-  justify-content: center;
-  left: 148px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 400px;
-  width: 116px;
-}
-
-.sign-in .modal-instance {
-  height: 272px !important;
-  left: 16px !important;
-  position: absolute !important;
-  top: 456px !important;
-}
-
-.sign-in .modal-2 {
-  margin-top: -1.50px !important;
-}
-
-.sign-in .modal-3 {
-  align-self: stretch !important;
-  left: unset !important;
-  margin-bottom: -1.50px !important;
-  top: unset !important;
-  width: 100% !important;
-}
-
-.sign-in .profile-pic {
-  background-image: url(./generic-avatar.svg);
-  background-size: 100% 100%;
-  display: flex;
-  height: 182px;
-  left: 115px;
-  position: absolute;
-  top: 184px;
-  width: 182px;
-}
-
-.sign-in .edit-profile-picture {
-  background-color: #d9d9d9;
-  border-radius: 9999px;
-  display: flex;
-  height: 40.62px;
-  margin-left: 141px;
-  width: 40.62px;
-}
-
-.sign-in .pencil-svgrepo-com {
-  height: 23.69px;
-  margin-left: 8.5px;
-  margin-top: 8.5px;
-  width: 23.69px;
-}
-
-.sign-in .svgrepo-iconcarrier {
-  background-image: url(./vector.svg);
-  background-size: 100% 100%;
-  height: 81.63%;
-  left: 9.24%;
-  position: relative;
-  top: 9.19%;
-  width: 81.55%;
+/* Responsive adjustments */
+@media (max-width: 412px) {
+  .signin-container {
+    width: 100%;
+    min-height: 100vh;
+  }
 }
