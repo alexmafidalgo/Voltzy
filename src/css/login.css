@@ -1,161 +1,223 @@
-.log-in {
-  background: linear-gradient(
-    180deg,
-    rgba(120, 184, 94, 1) 0%,
-    rgba(30, 123, 69, 1) 91%
-  );
-  min-height: 917px;
-  min-width: 412px;
+/* Main container */
+.login-container {
+  width: 412px;
+  height: 917px;
+  background: linear-gradient(180deg, #78B85E 0%, #1E7B45 90.87%);
   overflow: hidden;
   position: relative;
-  width: 100%;
+  margin: 0 auto;
 }
 
-.log-in .blobs {
-  height: 1019px;
-  left: -53px;
+/* Background decorative blobs */
+.background-blobs {
   position: absolute;
+  left: -53px;
   top: -47px;
   width: 571px;
+  height: 1020px;
+  pointer-events: none;
 }
 
-.log-in .ellipse {
-  height: 183px;
-  left: 53px;
-  position: absolute;
-  top: 781px;
-  width: 172px;
-}
-
-.log-in .img {
-  height: 118px;
-  left: 376px;
-  position: absolute;
-  top: 160px;
-  width: 89px;
-}
-
-.log-in .ellipse-2 {
-  height: 126px;
-  left: 53px;
-  position: absolute;
-  top: 293px;
-  width: 81px;
-}
-
-.log-in .ellipse-3 {
-  height: 221px;
-  left: 350px;
-  position: absolute;
-  top: 433px;
-  width: 115px;
-}
-
-.log-in .ellipse-4 {
-  height: 133px;
-  left: 77px;
-  position: absolute;
-  top: 47px;
-  width: 166px;
-}
-
-.log-in .sign-in-here {
-  align-items: center;
-  color: #ffffffbf;
+/* Profile picture */
+.profile-picture {
   display: flex;
-  font-family: "Comfortaa-Bold", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  height: 18px;
+  width: 182px;
+  height: 176px;
   justify-content: center;
-  left: 156px;
-  letter-spacing: 0;
+  align-items: center;
+  position: absolute;
+  left: 115px;
+  top: 184px;
+}
+
+.profile-picture img {
+  width: 182px;
+  height: 176px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+/* Login title */
+.login-title {
+  display: flex;
+  width: 105px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
   line-height: normal;
   position: absolute;
-  text-align: center;
-  top: 863px;
-  white-space: nowrap;
+  left: 153px;
+  top: 400px;
+  margin: 0;
 }
 
-.log-in .span {
-  color: #ffffffbf;
-  font-family: "Comfortaa-Bold", Helvetica;
+/* Login modal/form container */
+.login-modal {
+  display: flex;
+  width: 380px;
+  padding: 15px 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px;
+  background: rgba(171, 200, 171, 0.50);
+  position: absolute;
+  left: 16px;
+  top: 456px;
+  height: 175px;
+}
+
+/* Input fields container */
+.input-fields {
+  width: 360px;
+  height: 90px;
+  position: relative;
+}
+
+.input-field {
+  display: flex;
+  width: 360px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  height: 40px;
+}
+
+.input-field:first-child {
+  left: 0;
+  top: 0;
+}
+
+.input-field:last-child {
+  left: 0;
+  top: 50px;
+}
+
+/* Input controls */
+.input-control {
+  display: flex;
+  min-width: 120px;
+  width: 100%;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  background: #D9D9D9;
+  overflow: hidden;
+  flex: 1 0 0;
+  color: rgba(117, 117, 117, 1);
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  box-sizing: border-box;
+  outline: none;
 }
 
-.log-in .text-wrapper-2 {
+.input-control::placeholder {
+  color: rgba(117, 117, 117, 1);
+}
+
+.input-control:focus {
+  border-color: rgba(171, 200, 171, 1);
+}
+
+/* Login button */
+.login-button {
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #357850;
+  color: #FFF;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background: #2a6040;
+}
+
+.login-button:active {
+  background: #1f4830;
+}
+
+/* Signup section */
+.signup-section {
+  position: absolute;
+  left: 16px;
+  bottom: 54px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.signup-text {
+  display: flex;
+  width: 380px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.signup-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: 'Comfortaa', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.signup-link .underline {
   text-decoration: underline;
 }
 
-.log-in .div {
-  align-items: center;
-  color: #ffffffbf;
-  display: flex;
-  font-family: "Comfortaa-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  height: 16px;
-  justify-content: center;
-  left: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 840px;
-  white-space: nowrap;
-  width: 380px;
+.signup-link:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.log-in .text-wrapper-3 {
-  align-items: center;
-  color: #ffffff;
-  display: flex;
-  font-family: "Comfortaa-Bold", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 40px;
-  justify-content: center;
-  left: 153px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 400px;
-  width: 105px;
-}
-
-.log-in .pfp-instance {
-  background-image: url(./image.svg) !important;
-  height: 176px !important;
-  left: 115px !important;
-  position: absolute !important;
-  top: 184px !important;
-  width: 182px !important;
-}
-
-.log-in .modal-instance {
-  left: 16px !important;
-  position: absolute !important;
-  top: 456px !important;
-}
-
-.log-in .modal-2 {
-  height: 90px !important;
-}
-
-.log-in .modal-3 {
-  display: flex !important;
-  left: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-  width: 360px !important;
-}
-
-.log-in .modal-4 {
-  display: flex !important;
-  left: 0 !important;
-  position: absolute !important;
-  top: 50px !important;
-  width: 360px !important;
+/* Responsive adjustments */
+@media (max-width: 412px) {
+  .login-container {
+    width: 100%;
+    min-height: 100vh;
+  }
 }
